@@ -1,3 +1,14 @@
 spring:
-  application:
-    name: estoque.relogio
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: manager
+    url: jdbc:postgresql://localhost:5432/relogiosx
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
