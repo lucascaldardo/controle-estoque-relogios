@@ -62,8 +62,28 @@ public class Relogio {
     private long precoEmCentavos;
 
     @Column(nullable = false, length = 600)
-
     private String urlImagem;
+
+    @Column(nullable = false)
     private Instant criadoEm;
+
+    @PrePersist
+    void prePersist(){
+        if (id == null) id = UUID.randomUUID();
+        if (criadoEm == null) criadoEm = Instant.now();
+        normalizar();
+    }
+
+    @PreUpdate
+    void preUpdate(){
+        normalizar();
+    }
+
+    private void normalizar(){
+        if (marca != null) marca = marca.trim();
+        if (modelo != null) modelo = modelo.trim();
+        if (referencia != null) referencia = referencia.trim();
+        if (urlImagem != null) urlImagem = urlImagem.trim();
+    }
 
 }
