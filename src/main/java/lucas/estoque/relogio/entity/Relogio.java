@@ -2,6 +2,9 @@ package lucas.estoque.relogio.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lucas.estoque.relogio.entity.enums.MaterialCaixa;
+import lucas.estoque.relogio.entity.enums.TipoMovimento;
+import lucas.estoque.relogio.entity.enums.TipoVidro;
 
 import java.time.Instant;
 import java.util.UUID;

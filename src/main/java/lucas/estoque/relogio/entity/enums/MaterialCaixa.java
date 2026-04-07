@@ -1,4 +1,4 @@
-package lucas.estoque.relogio.entity;
+package lucas.estoque.relogio.entity.enums;
 
 public enum MaterialCaixa {
     ACO, TITANIO, RESINA, BRONZE, CERAMICA;
