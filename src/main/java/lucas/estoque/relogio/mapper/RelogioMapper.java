@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class RelogioMapper {
 
     public RelogioDTO toDto(Relogio r){
-        return Relogio.builder()
+        return RelogioDTO.builder()
                 .id(r.getId())
                 .marca(r.getMarca())
                 .referencia(r.getReferencia())
@@ -20,7 +20,7 @@ public class RelogioMapper {
                 .tipoVidro(r.getTipoVidro().toApi())
                 .resistenciaAguaM(r.getResistenciaAguaM())
                 .diametroMm(r.getDiametroMm())
-                .lugTolugMm(r.getLugTolugMm())
+                .lugToLugMm(r.getLugTolugMm())
                 .espessuraMm(r.getEspessuraMm())
                 .larguraLugMm(r.getLarguraLugMm())
                 .precoEmCentavos(r.getPrecoEmCentavos())
