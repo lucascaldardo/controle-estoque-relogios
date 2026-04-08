@@ -24,7 +24,10 @@ public class RelogioMapper {
                 .espessuraMm(r.getEspessuraMm())
                 .larguraLugMm(r.getLarguraLugMm())
                 .precoEmCentavos(r.getPrecoEmCentavos())
-                .urlImagem(r.getUrlImagem());
+                .urlImagem(r.getUrlImagem())
+                .etiquetaResistenciaAgua(etiquetaResistencia(r.getResistenciaAguaM()))
+                .pontuacaoColecionador(pontuacaoColecionador(r))
+                .build();
     }
 
     private String etiquetaResistencia(int resistenciaM){
