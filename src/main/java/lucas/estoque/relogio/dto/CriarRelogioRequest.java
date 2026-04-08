@@ -3,7 +3,7 @@ package lucas.estoque.relogio.dto;
 import jakarta.validation.constraints.*;
 
 public record CriarRelogioRequest(
-        @NotBlank @Size(max = 80) String marcar,
+        @NotBlank @Size(max = 80) String marca,
         @NotBlank @Size(max = 120) String modelo,
         @NotBlank @Size(max = 80) String referencia,
 
