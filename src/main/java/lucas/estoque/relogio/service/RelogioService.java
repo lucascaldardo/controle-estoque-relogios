@@ -9,6 +9,7 @@ import lucas.estoque.relogio.entity.Relogio;
 import lucas.estoque.relogio.entity.enums.MaterialCaixa;
 import lucas.estoque.relogio.entity.enums.TipoMovimento;
 import lucas.estoque.relogio.entity.enums.TipoVidro;
+import lucas.estoque.relogio.exception.NaoEncontradoException;
 import lucas.estoque.relogio.mapper.RelogioMapper;
 import lucas.estoque.relogio.repository.RelogioRepository;
 import org.springframework.data.domain.Page;
@@ -113,7 +114,6 @@ public class RelogioService {
     public RelogioDTO atualizar(UUID id, AtualizarRelogioRequest req) {
         Relogio r = relogioRepository.findById(id)
                 .orElseThrow(() -> new NaoEncontradoException("Relógio não encontrado: " + id));
-
         r.setMarca(req.marca());
         r.setModelo(req.modelo());
         r.setReferencia(req.referencia());
