@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: manager
-    url: jdbc:postgresql://localhost:5432/relogiosx
+    password: 123
+    url: jdbc:postgresql://localhost:5432/relogio
   jpa:
     generate-ddl: true
     show-sql: true
